@@ -1,4 +1,4 @@
-function mpc = troisnoeuds
+function mpc = Grid_Simulation
 
 define_constants;
 %   $Id: case9.m,v 1.7 2007/09/17 16:07:48 ray Exp $ (/ 225 400.0) (/ 1 1.1)
