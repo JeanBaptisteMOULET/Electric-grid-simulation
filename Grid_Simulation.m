@@ -14,9 +14,9 @@ mpc.baseMVA = 100; %correspond à Sb=100Mva
 %% bus data type 2=gene 1=charge 3=bilan
 %	bus_i	type	Pd	Qd	Gs	Bs	area	Vm	Va	baseKV	zone	Vmax	Vmin
 mpc.bus = [
-	        1	3	0	0	0	0	1	1	0	400	1	1.1	0.7;%noeud 1 de référence=type3      
-	        2	1	10	40	0	0	1	1	0	225	2	1.1	0.7;%noeuds restants consommateurs=type1  
-	        3	2	0	0	0	0	1	1	0	225	2	1.1	0.7;%noeuds 3 et 11 générateurs=type2	 
+            1	3	0	0	0	0	1	1	0	400	1	1.1	0.7;%noeud 1 de référence=type3      
+            2	1	10	40	0	0	1	1	0	225	2	1.1	0.7;%noeuds restants consommateurs=type1  
+	    3	2	0	0	0	0	1	1	0	225	2	1.1	0.7;%noeuds 3 et 11 générateurs=type2	 
             4	1	35	40	0	0	1	1	0	225	2	1.1	0.7;
             5	1	60	20	0	0	1	1	0	225	2	1.1	0.7;
             6	1	50	25	0	0	1	1	0	225	2	1.1	0.7;
@@ -32,11 +32,11 @@ mpc.bus = [
 
 
 %% generator data
-%	bus	Pg	Qg	Qmax	Qmin	Vg	        mBase	status	Pmax	Pmin
+%	   bus	Pg	Qg	Qmax	Qmin	Vg	        mBase	status	Pmax	Pmin
 mpc.gen = [
-        1	0	0	300	-300	416/400	    100	1	300	10;
-	    3	80	0	300	-300	229.5/225   100	1	300	10;
-	    11	20	0	300	-300	89.1/90	    100	1	300	10;
+            1	0	0	300	-300	416/400	    	100	1	300	10;
+	    3	80	0	300	-300	229.5/225  	100	1	300	10;
+	    11	20	0	300	-300	89.1/90	    	100	1	300	10;
    
 ];
 
@@ -71,23 +71,23 @@ xp=0.12; xs=0.1; xt=0.1;
 %% branch data
 %	fbus tbus	r	    x	        b	rateA	rateB	rateC	ratio	angle	status
 mpc.branch = [
-	    2	1	0	   xcc	    0	100	100	100 1	0	1;
-	    2	3	r      x	        b	100	100	100	0	0	1;
-        2	5	r      x	        b	100	100	100	0	0	1;
-        2	4	r      x	        b	100	100	100	0	0	1;
-        3	4	r      x	        b	100	100	100	0	0	1;
-        4	5	r      x	        b	100	100	100	0	0	1;
-	    5	6	r      x	        b	100	100	100	0	0	1;
-        4	6	r      x	        b	100	100	100	0	0	1;
-        6	7	0      xp	        0	100	100	100	1	0	1;
-        8	7	0      xs	        0	100	100	100	1.15	0	1;
-        8	9	r2     x2	        b2	100	100	100	0	0	1;
-        8	10	r2     x2	        b2	100	100	100	0	0	1;
-        10	12	r2     x2	        b2	100	100	100	0	0	1;
-        9	11	r2     x2	        b2	100	100	100	0	0	1;
-        11	12	r2     x2	        b2	100	100	100	0	0	1;
-        12	13	r2     x2	        b2	100	100	100	0	0	1;
-        13	14	r2     x2	        b2	100	100	100	0	0	1;
+	2	1	0	   xcc	   	0	100	100	100 	1	0	1;
+        2	3	r    	   x	        b	100	100	100	0	0	1;
+        2	5	r    	   x	        b	100	100	100	0	0	1;
+        2	4	r    	   x	        b	100	100	100	0	0	1;
+        3	4	r   	   x	        b	100	100	100	0	0	1;
+        4	5	r   	   x	        b	100	100	100	0	0	1;
+        5	6	r    	   x	        b	100	100	100	0	0	1;
+        4	6	r   	   x	        b	100	100	100	0	0	1;
+        6	7	0     	   xp	        0	100	100	100	1	0	1;
+        8	7	0     	   xs	        0	100	100	100	1.15	0	1;
+        8	9	r2   	   x2	        b2	100	100	100	0	0	1;
+        8	10	r2   	   x2	        b2	100	100	100	0	0	1;
+        10	12	r2    	   x2	        b2	100	100	100	0	0	1;
+        9	11	r2    	   x2	        b2	100	100	100	0	0	1;
+        11	12	r2    	   x2	        b2	100	100	100	0	0	1;
+        12	13	r2   	   x2	        b2	100	100	100	0	0	1;
+        13	14	r2    	   x2	        b2	100	100	100	0	0	1;
         ];
 
 return;
